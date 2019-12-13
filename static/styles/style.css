@@ -39,10 +39,7 @@ ul {
 }
 
 #footer {
-/*  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;*/
+
   background-color: #DDDDDD;
   flex-shrink: 0;
   padding-top: 30px;
@@ -66,7 +63,6 @@ ul {
 }
 
 .barValues {
-  /*font-size: 11px;*/
   font-weight: bold;
 }
 
@@ -84,7 +80,6 @@ ul {
 }
 
 .yearLabel {
-/*    font-size: 160px;*/
     fill: gray;
 }
 
@@ -111,7 +106,6 @@ ul {
   pointer-events: none;
 }
 
-/* Creates a small triangle extender for the tooltip */
 .d3-tip:after {
   box-sizing: border-box;
   display: inline;
@@ -123,7 +117,6 @@ ul {
   pointer-events: none;
 }
 
-/* Northward tooltips */
 .d3-tip.n:after {
   content: "\25BC";
   margin: -1px 0 0 0;
@@ -132,7 +125,6 @@ ul {
   text-align: center;
 }
 
-/* Eastward tooltips */
 .d3-tip.e:after {
   content: "\25C0";
   margin: -4px 0 0 0;
@@ -140,7 +132,6 @@ ul {
   left: -8px;
 }
 
-/* Southward tooltips */
 .d3-tip.s:after {
   content: "\25B2";
   margin: 0 0 1px 0;
@@ -149,7 +140,6 @@ ul {
   text-align: center;
 }
 
-/* Westward tooltips */
 .d3-tip.w:after {
   content: "\25B6";
   margin: -4px 0 0 -1px;
@@ -226,13 +216,8 @@ hr {
 
 .barYAxis {
   font-family: "Helvetica Neue";
- /* font-size: 13px;*/
   font-weight: bold;
 }
-
-/*#extra_Chart {
-  height: 300px;
-}*/
 
 .crimeType{
   font-weight: bold;
@@ -247,11 +232,8 @@ hr {
 }
 
 #mapSection {
-/*  height: 300px;
-  width: 500px;*/
   margin-left: 50px;
   margin-right: 0;
-  /*height: 100%;*/
 }
 
 .leaflet-popup-content-wrapper {
@@ -271,7 +253,6 @@ hr {
   background-color: transparent;
   }
 .leaflet-popup-tip {
-    /*background: "red";*/
     border: none;
     box-shadow: none;
   }

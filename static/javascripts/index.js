@@ -8,9 +8,7 @@ createBubbleChart(1976,"all_states");
 function createBubbleChart(year,scope) {	
 	if (d3.select("#bubbleChart")) {
 		$("#bubbleChart").remove();
-		/*d3.select("#bubbleChart").remove();*/
 	};
-	/*define svg container dimensions for bubble chart*/
 
 
 	if (windowWidth > 992) {
@@ -21,7 +19,6 @@ function createBubbleChart(year,scope) {
 	
 	var svgHeight_b = svgWidth_b /16 * 9;
 
-	/*define margins around bubble chart area*/
 	var margin_b = {
 	  top: 50,
 	  right: 20,
@@ -121,7 +118,6 @@ function createBubbleChart(year,scope) {
 	var routeURL = "/chartdata"
 	d3.json(routeURL, function(data) {
 		
-	/*	var bubbleData = data.chartData;*/
 	  /*create a list of years from the data*/
 	  data.map(function (d) {
 	  	return d.year = d.year.map(d=>parseInt(d))
@@ -196,7 +192,6 @@ function createBubbleChart(year,scope) {
 		circleGroup.on("mouseout",function (data){
 			toolTip_b.hide(data);
 		});	
-	/*==============================================*/
 
 	  circleGroup.on("click", function (d) {
 			/*dataFilter(d.stateCode);*/
@@ -223,7 +218,6 @@ function createBubbleChart(year,scope) {
 		});
 
 	  
-	/*==============================================*/
 		/*define function to sort the bubbles based on radius*/
 	  function radius(d) { return d.population; }
 	  function order(a, b) { return radius(b) - radius(a); } /*sort in descending order*/
@@ -813,7 +807,6 @@ function showMap(selectedYear,selectedState,clickedData) {
 
   d3.json(link, function(data) {
     // Creating a geoJSON layer with the retrieved data
-/*	highlightState(selectedState);*/
 	    L.geoJson(data, {
 	      // Style each feature (in this case a neighborhood)
 	      
@@ -859,8 +852,6 @@ function showMap(selectedYear,selectedState,clickedData) {
 	          },
 	          // When a feature (neighborhood) is clicked, it is enlarged to fit the screen
 	          click: function(event) {
-	            /*map.fitBounds(event.target.getBounds());
-	            layer = event.target;*/
 	            layer.setStyle({
 	              fillOpacity: 0.8,
 	              fillColor: "red"
@@ -894,9 +885,6 @@ function showMap(selectedYear,selectedState,clickedData) {
 	      }
 	    }).addTo(map);
 
-	    
-/*	}*/
-
     var selectedData = data.features.filter(d=> d.properties.name == selectedState);
     var stateBounds = L.geoJson(selectedData).getBounds();
     var zoom = map.getBoundsZoom(stateBounds);
@@ -908,7 +896,7 @@ function showMap(selectedYear,selectedState,clickedData) {
     function zoomin(){
         map.flyTo(center, zoom,{
               animate: true,
-              duration: 2 // in seconds
+              duration: 2 
             });  
     }
 
