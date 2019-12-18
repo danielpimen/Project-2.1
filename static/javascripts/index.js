@@ -171,7 +171,6 @@ function createBubbleChart(year,scope) {
 	  console.log("data after",data);
 	  var yearList = data[0].year;  
 
-	  /*create the inital bubble chart*/
 		var circleGroup = bubbleChartGroup.selectAll(".circle")
 			.data(interpolateData(year)) /*bind first year's data*/
 			.enter()
@@ -277,7 +276,7 @@ function createBubbleChart(year,scope) {
 			.ease(d3.easeLinear)
 			.tween("year",tweenYear); /*use tween method to create transition frame by frame*/
 
-		setTimeout(showObservation, 30500);
+		setTimeout(showObservation, 500);
 
 		function showObservation() {
 			d3.selectAll("#observationSection")
@@ -369,8 +368,6 @@ function createBubbleChart(year,scope) {
 	});
 }
 
-  /*codes for extra chart section
-  =======================================*/
 
 	function extraChart(clickedYear, clickedState, clickedData) {
 		/*define svg container dimensions for extra bar chart and pie chart*/
